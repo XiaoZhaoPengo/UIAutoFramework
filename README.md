@@ -35,7 +35,7 @@
 
 1. 克隆项目:
 ```bash
-git clone [项目地址]
+git clone github.com/XiaoZhaoPengo/UIAutoFramework.git
 ```
 
 2. 安装依赖:
