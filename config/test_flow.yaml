@@ -1,0 +1,14 @@
+flow:
+  - type: web
+    case: test_web_demo
+    data: 
+      - 123
+      - 456
+  - type: app
+    case: test_app_demo
+  - type: web
+    case: test_web_demo
+    data: 
+      - 789
+  - type: app
+    case: test_app_demo

@@ -1,0 +1,79 @@
+# Web 端的配置
+web:
+  web_type: "chrome"  # 可以是 "chrome" 或 "firefox"
+  --headless: false  # 默认false取消取消无头模式
+  capabilities:
+    chromeOptions:
+      args:
+
+        - "--no-sandbox"  # 禁用沙盒模式，在某些环境（如Docker）中可能需要
+        - "--disable-gpu"  # 禁用GPU硬件加速，在某些系统上可能需要
+        - "--start-maximized"  # 添加这一行来最大化窗口
+        # - "--kiosk"  # 全屏模式，类似于kiosk终端，可能会覆盖其他窗口
+        # - "--disable-extensions"  # 禁用浏览器扩展，提高性能和一致性
+        # - "--disable-dev-shm-usage"  # 避免在某些Linux系统上的内存问题
+        # - "--remote-debugging-port=9222"  # 启用远程调试，方便诊断问题
+        # - "--window-size=1920,1080"  # 设置窗口大小，当不使用最大化时有用
+  urls:
+    url1: "http://baidu.com"
+    url2: "http://dev.admin.zuzuya.cn"
+  wait:
+    max_timeout: 5
+    poll_frequency: 0.2
+  cluster:
+    enabled: false
+    hub_url: ""
+
+# app的UI设置 配置
+appui:
+  appium_server_url: 'http://127.0.0.1:4723/wd/hub'
+
+# Android 设备的配置
+android:
+  capabilities:
+    platformName: "Android"
+    deviceName: "Android Emulator"
+    appPackage: "com.example.android"
+    appActivity: "com.example.android.MainActivity"
+    automationName: "UiAutomator2"
+    noReset: True
+    newCommandTimeout: 3600
+
+# iOS 设备的配置
+ios:
+  capabilities:
+    platformName: "ios"
+    platformVersion: "18.0"
+    deviceName: "肖朝鹏的iPhone"
+    udid: "00008130-001660DC34DA001C"
+    bundleId: "com.alipay.iphoneclient"
+    automationName: "XCUITest"
+    noReset: False  # 这将在每次会话开始时重置应用状态
+    newCommandTimeout: 3600
+
+# 日志配置
+logging:
+  level: INFO
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"
+
+
+# 报告配置
+reporting:
+  format: allure
+  output_dir: ./reports/allure-results
+  notification:
+    types: "0"  # 0: 不发送, 1: 钉钉, 2: 企业微信, 3: 邮箱
+
+notification:
+  dingtalk:
+    webhook: "https://oapi.dingtalk.com/robot/send?access_token=your_access_token"
+    secret: "your_secret_here"
+  wechat:
+    webhook: "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=your_key"
+  email:
+    smtp_server: "smtp.example.com"
+    smtp_port: 587
+    sender_email: "sender@example.com"
+    sender_password: "your_password"
+    receiver_email: "receiver@example.com"

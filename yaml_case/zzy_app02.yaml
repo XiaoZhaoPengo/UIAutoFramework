@@ -1,0 +1,63 @@
+# 定位方式
+# MobileBy.ACCESSIBILITY_ID: 使用 accessibility id 定位元素
+# 示例: { by: ACCESSIBILITY_ID, value: "search_button" }
+
+# MobileBy.IOS_PREDICATE: 使用 iOS 的 predicate 字符串定位元素
+# 示例: { by: IOS_PREDICATE, value: "name == 'Login Button' AND type == 'XCUIElementTypeButton'" }
+
+# MobileBy.IOS_CLASS_CHAIN: 使用 iOS 的 class chain 定位元素
+# 示例: { by: IOS_CLASS_CHAIN, value: "**/XCUIElementTypeButton[`name == 'Login'`]" }
+
+# MobileBy.ANDROID_UIAUTOMATOR: 使用 Android 的 UiAutomator 定位元素
+# 示例: { by: ANDROID_UIAUTOMATOR, value: "new UiSelector().text(\"Login\")" }
+
+# MobileBy.ANDROID_VIEWTAG: 使用 Android 的 view tag 定位元素
+# 示例: { by: ANDROID_VIEWTAG, value: "login_button_tag" }
+
+# MobileBy.XPATH: 使用 XPath 定位元素
+# 示例: { by: XPATH, value: "//android.widget.Button[@text='Login']" }
+
+# MobileBy.NAME: 使用 name 属性定位元素
+# 示例: { by: NAME, value: "Login" }
+
+# MobileBy.CLASS_NAME: 使用 class name 定位元素
+# 示例: { by: CLASS_NAME, value: "android.widget.Button" }
+
+# MobileBy.ID: 使用 id 定位元素
+# 示例: { by: ID, value: "com.example.app:id/login_button" }
+
+# MobileBy.CSS_SELECTOR: 使用 CSS 选择器定位元素（主要用于 Web 视图）
+# 示例: { by: CSS_SELECTOR, value: "#login-button" }
+
+# COORDINATES: 坐标定位 "x,y"
+# 示例: { by: COORDINATES, value: "100,200" }
+
+
+casename: test_ios_zzy02
+title: 支付宝租租鸭小程序测试
+
+testdata:
+  - "iPhone 15 Pro Max"
+
+locators:
+  - step: 点击搜索框
+    by: XPATH
+    value: "//XCUIElementTypeOther[@name='搜索框']"
+    action: click
+
+  - step: 点击我的小程序
+    by: XPATH
+    value: "//XCUIElementTypeStaticText[@name='我的小程序']"
+    action: click
+
+  - step: 点击租租鸭小程序
+    by: XPATH
+    value: "//XCUIElementTypeStaticText[@name='租租鸭']"
+    action: click
+    sleep: 3
+
+
+  - step: 点击iPhone 14 Pro Max
+    by: COORDINATES
+    value: "346,850"
+    action: click

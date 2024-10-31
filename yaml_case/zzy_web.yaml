@@ -1,0 +1,249 @@
+casename: zzy_web
+title: 管理员登录和审核流程测试
+testdata:
+  - username: "18271421203"
+    verification_code: "1234"
+    phone: "18271421203"
+    note: "审核通过"
+    price: 6
+    note2: "审核通过"
+
+locators:
+  - step: 1点击登录前置按钮
+    by: class_name
+    value: dingdingzhImage
+    operate: click
+    info: 点击登录前置按钮
+
+  - step: 2输入用户名
+    by: class_name
+    value: "el-input__inner"
+    operate: send_keys
+    input: "{username}"
+    info: 输入用户名
+
+  - step: 3输入验证码
+    by: xpath
+    value: "//*[@id='app']/div/div[2]/div[2]/form/div[2]/div/div/input"
+    operate: send_keys
+    input: "{verification_code}"
+    info: 输入验证码
+
+  - step: 4点击获取验证码
+    by: xpath
+    value: "//*[@id='app']/div/div[2]/div[2]/form/div[2]/div/div[1]/div/button/span"
+    operate: click
+    info: 点击获取验证码
+    sleep: 0.5
+
+  - step: 5提交登录信息
+    by: xpath
+    value: "//*[@id='app']/div/div[2]/div[2]/form/div[3]/div/button"
+    operate: click
+    info: 提交登录信息
+    sleep: 5
+
+  - step: 6点击订单管理
+    by: xpath
+    value: "//*[@id='app']/div/aside/ul/li[3]/div/span"
+    operate: click
+    info: 点击订单管理
+
+  - step: 点击订单列表
+    by: xpath
+    value: "//*[@id='app']/div/aside/ul/li[3]/ul/li[1]"
+    operate: click
+    info: 点击订单列表
+    sleep: 0.5
+
+  - step: 等待手机号输入框
+    by: xpath
+    value: "//*[@id='app']/div/div/div[2]/div/div/div/div[1]/form/div[3]/div/div/input"
+    operate: wait_for_element
+    timeout: 3
+    info: 等待手机号输入框出现  
+
+  - step: 输入手机号
+    by: xpath
+    value: "//*[@id='app']/div/div/div[2]/div/div/div/div[1]/form/div[3]/div/div/input"
+    operate: send_keys
+    input: "{phone}"
+    info: 输入手机号
+    sleep: 3
+
+  - step: 点击跳转审核
+    by: xpath
+    value: "//*[@id='app']/div/div/div[2]/div/div/div/div[3]/div/div/div[3]/table/tbody/tr[2]/td/div[2]/div/div[2]/table/tbody/tr/td[12]/div/div[1]"
+    operate: click
+    info: 点击跳转审核
+    sleep: 5
+
+  - step: 切换到第二个窗口
+    operate: switch_window
+    target: 1  # new或者设置为具体的窗口索引，例如 1 或 2
+    info: 切换到第二个窗口
+    sleep: 1
+
+  - step: 审核扣款
+    by: xpath
+    value: "//*[@id='app']/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/button[5]/span"
+    operate: click
+    info: 审核扣款
+    sleep: 0.5
+
+  - step: 勾选扣款
+    by: xpath
+    value: "/html/body/div[1]/div/div/div[2]/div/div/div/div[10]/div/div[2]/div[2]/div[2]/div[2]/label[1]/span[1]/span"
+    operate: click
+    info: 勾选扣款
+
+  - step: 勾选保证金
+    by: xpath
+    value: "/html/body/div[1]/div/div/div[2]/div/div/div/div[10]/div/div[2]/div[2]/div[4]/div/div/span/span/i"
+    operate: click
+    info: 勾选保证金
+    sleep: 1
+
+  - step: 选择保证金
+    by: xpath
+    value: /html/body/div[3]/div[1]/div[1]/ul/li[1]
+    operate: click
+    info: 选择保证金
+
+  - step: 点击扣款
+    by: xpath
+    value: "//*[@id='app']/div/div/div[2]/div/div/div/div[10]/div/div[2]/div[2]/div[8]/button/span"
+    operate: click
+    info: 点击扣款
+    sleep: 8
+
+  - step: 关闭扣款审核页
+    by: xpath
+    value: "/html/body/div[1]/div/div/div[2]/div/div/div/div[10]/div/div[1]/button"
+    operate: click
+    info: 关闭扣款审核页
+    sleep: 1
+
+  - step: 点击审核
+    by: xpath
+    value: "//*[@id='app']/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/div/span/span"
+    operate: click
+    info: 点击审核
+    sleep: 0.5
+
+  - step: 选择审核通过
+    by: xpath
+    value: "/html/body/ul/li[1]"
+    operate: click
+    info: 选择审核通过
+    sleep: 0.5
+
+  - step: 输入备注
+    by: xpath
+    value: "//*[@id='app']/div/div/div[2]/div/div/div/div[11]/div/div[2]/form/div/div/div/textarea"
+    operate: send_keys
+    input: "{note}"
+    info: 输入备注
+    sleep: 1
+
+  - step: 确认审核通过
+    by: xpath
+    value: "//*[@id='app']/div/div/div[2]/div/div/div/div[11]/div/div[3]/span/button[1]"
+    operate: click
+    info: 确认审核通过
+    sleep: 3
+
+  - step: 切换回原始窗口
+    operate: switch_window
+    target: 0
+    info: 切换回原始窗口0
+    sleep: 0.5
+
+  - step: 点击订单状态-已预约
+    by: xpath
+    value: /html/body/div/div/div/div[2]/div/div/div/div[1]/div/div[2]/div[3]
+    operate: click
+    info: 点击订单状态-已预约
+    sleep: 2
+
+  - step: 发货
+    by: xpath
+    value: /html/body/div/div/div/div[2]/div/div/div/div[3]/div/div/div[3]/table/tbody/tr[2]/td/div[2]/div/div[2]/table/tbody/tr/td[12]/div/div[1]
+    operate: click
+    info: 发货
+    sleep: 1
+
+  - step: 填写发货方式-运输方式
+    by: xpath
+    value: /html/body/div[1]/div/div/div[2]/div/div/div/div[7]/div/div[2]/form/div[1]/div/div/div/span/span/i
+    operate: click
+    info: 运输方式
+    sleep: 1
+
+  - step: 选择运输方式-湖北武汉
+    by: xpath
+    value: /html/body/div[3]/div[1]/div[1]/ul/li[3]/span
+    operate: click
+    info: 选择运输方式-湖北武汉
+    sleep: 1
+
+
+  - step: 输入采购价
+    by: xpath
+    value: /html/body/div[1]/div/div/div[2]/div/div/div/div[7]/div/div[2]/form/div[3]/div/div/input
+    operate: send_keys
+    input: "{price}"
+    info: 输入采购价
+
+  - step: 输入备注
+    by: xpath
+    value: //*[@id='app']/div/div/div[2]/div/div/div/div[7]/div/div[2]/form/div[4]/div/div/textarea
+    operate: send_keys
+    input: "{note2}"
+    info: 输入备注
+
+  - step: 点击发货
+    by: xpath
+    value: //*[@id='app']/div/div/div[2]/div/div/div/div[7]/div/div[2]/form/div[5]/div/button/span
+    operate: click
+    info: 点击发货
+    sleep: 3
+
+  - step: 订单状态-点击体验期
+    by: xpath
+    value: //*[@id='app']/div/div/div[2]/div/div/div/div[1]/div/div[2]/div[6]
+    operate: click
+    info: 订单状态-点击体验期
+    sleep: 3
+
+  - step: 访问体验期订单详情
+    by: xpath
+    value: //*[@id='app']/div/div/div[2]/div/div/div/div[3]/div/div/div[3]/table/tbody/tr[2]/td/div[1]/div/div[2]
+    operate: click
+    info: 访问体验期订单详情
+
+
+  - step: 切换到新窗口
+    operate: switch_window
+    target: 2
+    info: 切换到窗口2
+    sleep: 2
+
+  - step: 查看分期账单
+    by: xpath
+    value: "/html/body/div/div/div/div[2]/div/div/div/div[1]/div[3]/div[6]/div"
+    operate: click
+    info: 点击查看分期账单
+
+  - step: 勾选第二期账单
+    by: xpath
+    value: "/html/body/div[1]/div/div/div[2]/div/div/div/div[1]/div[3]/div[7]/div/div[2]/div/div/div[4]/div[3]/table/tbody/tr[2]/td[1]/div/label/span/span"
+    operate: click
+    info: 勾选第二期账单
+
+  - step: 点击发起代扣扣款
+    by: xpath
+    value: "//*[@id='app']/div/div/div[2]/div/div/div/div[1]/div[3]/div[7]/div/div[3]/div/button[3]"
+    operate: click
+    info: 点击发起代扣扣款
+    sleep: 3

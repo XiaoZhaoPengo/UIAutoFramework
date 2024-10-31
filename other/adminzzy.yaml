@@ -1,0 +1,467 @@
+#web 定位模板
+#- casename: # 测试用例
+#  title: #用例标题
+#  precond: #前置
+#  testdata:
+#    - loginname: "admin"
+#      password: "fdr**2020"
+#      assertion: "管理员"
+#    - loginname: "18268"
+#      password: "123456a?"
+#      assertion: "18268"
+#  element:
+#    - casesteid:  # 步骤id
+#      types:   # 定位类型
+#      operate:    # 操作类型
+#      locate: # 定位器
+#      listindex: # 多个时列表索引 单个为空 /int
+#      locawait:              #操作等待时间  folt/s
+#      info:    # 步骤说明
+
+- model: AdminZzy  # 对应pageobj 的类名称
+
+- casename: click_button_01
+  title: 点击登录前置按钮
+  precond:
+  testdata:
+  element:
+    - casesteid: 1            # 操作步骤
+      types: class             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: dingdingzhImage             # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:               #操作等待时间  folt/s
+      info: 点击登录前置按钮       # 操作说明
+
+- casename: input_user
+  title: 输入用户名
+  precond:
+  testdata:
+  element:
+    - casesteid: 2            # 操作步骤
+      types: class             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: input          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: el-input__inner              # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:               #操作等待时间  folt/s
+      info: 输入用户名       # 操作说明
+
+- casename: input_code
+  title: 输入验证码
+  precond:
+  testdata:
+  element:
+    - casesteid: 3            # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: input          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div[2]/div[2]/form/div[2]/div/div/input              # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:              #操作等待时间  folt/s
+      info: 输入验证码       # 操作说明
+
+- casename: click_button_02
+  title: 获取验证码
+  precond:
+  testdata:
+  element:
+    - casesteid: 4           # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div[2]/div[2]/form/div[2]/div/div[1]/div/button/span             # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 获取验证码       # 操作说明
+
+- casename: input_sub
+  title: 提交登录信息
+  precond:
+  testdata:
+  element:
+    - casesteid: 5           # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div[2]/div[2]/form/div[3]/div/button/span             # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 提交登录信息       # 操作说明
+
+- casename: url
+  title: 获取当前url
+  precond:
+  testdata:
+  element:
+    - casesteid: 6           # 操作步骤
+      types: function             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: web_url          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate:              # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 获取当前url       # 操作说明
+
+
+- casename: click_button_03
+  title: 点击订单管理
+  precond:
+  testdata:
+  element:
+    - casesteid: 7           # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/aside/ul/li[3]/div/span             # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 点击订单管理       # 操作说明
+
+- casename: click_button_04
+  title: 点击订单列表
+  precond:
+  testdata:
+  element:
+    - casesteid: 8           # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/aside/ul/li[3]/ul/li[1]             # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 点击订单列表       # 操作说明
+
+- casename: search_input
+  title: 搜索输入手机号
+  precond:
+  testdata:
+  element:
+    - casesteid: 9           # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: input          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[1]/form/div[3]/div/div/input             # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 搜索输入手机号       # 操作说明
+
+- casename: examine_btn
+  title: 点击跳转审核
+  precond:
+  testdata:
+  element:
+    - casesteid: 10           # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[3]/div/div/div[3]/table/tbody/tr[2]/td/div[2]/div/div[2]/table/tbody/tr/td[12]/div/div[1]             # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 点击跳转审核       # 操作说明
+
+
+- casename: examine_deduction
+  title: 审核扣款
+  precond:
+  testdata:
+  element:
+    - casesteid: 14          # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/button[5]/span            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 审核扣款       # 操作说明
+
+- casename: check_deduction
+  title: 勾选扣款
+  precond:
+  testdata:
+  element:
+    - casesteid: 14          # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[9]/div/div[2]/div[2]/div[2]/div[2]/label[1]/span[1]/span            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 勾选扣款       # 操作说明
+
+
+- casename: check_bond
+  title: 勾选保证金
+  precond:
+  testdata:
+  element:
+    - casesteid: 14          # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: /html/body/div[1]/div/div/div[2]/div/div/div/div[9]/div/div[2]/div[2]/div[4]/div/div/span/span/i            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 勾选保证金       # 操作说明
+
+- casename: bond_btn
+  title: 选择保证金
+  precond:
+  testdata:
+  element:
+    - casesteid: 14          # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: /html/body/div[3]/div[1]/div[1]/ul/li[1]/span            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: bond_btn       # 操作说明
+
+- casename: deduction_btn
+  title: 点击扣款
+  precond:
+  testdata:
+  element:
+    - casesteid: 14          # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[9]/div/div[2]/div[2]/div[8]/button/span            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 点击扣款       # 操作说明
+
+- casename: deduction_exit
+  title: 关闭扣款审核页
+  precond:
+  testdata:
+  element:
+    - casesteid: 14          # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[9]/div/div[1]/button/i            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 关闭扣款审核页       # 操作说明
+
+
+
+- casename: examine_pass
+  title: 点击审核
+  precond:
+  testdata:
+  element:
+    - casesteid: 11           # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/div/span            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 点击审核       # 操作说明
+
+- casename: examine_pass_01
+  title: 点击审核通过
+  precond:
+  testdata:
+  element:
+    - casesteid: 12           # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: /html/body/ul/li[1]            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 点击审核通过       # 操作说明
+
+
+
+
+- casename: input_notes
+  title: 输入备注
+  precond:
+  testdata:
+  element:
+    - casesteid: 14          # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: input          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[10]/div/div[2]/form/div/div/div/textarea            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 输入备注       # 操作说明
+
+- casename: examine_pass_02
+  title: 点击审核通过
+  precond:
+  testdata:
+  element:
+    - casesteid: 13          # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[10]/div/div[3]/span/button[1]/span            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 点击审核通过       # 操作说明
+
+
+
+
+- casename: stateBtn_reservation
+  title: 点击订单状态-已预约
+  precond:
+  testdata:
+  element:
+    - casesteid: 14          # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: /html/body/div/div/div/div[2]/div/div/div/div[1]/div/div[2]/div[3]            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 点击订单状态-已预约       # 操作说明
+
+
+
+- casename: send_out
+  title: 发货
+  precond:
+  testdata:
+  element:
+    - casesteid: 14          # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: /html/body/div/div/div/div[2]/div/div/div/div[3]/div/div/div[3]/table/tbody/tr[2]/td/div[2]/div/div[2]/table/tbody/tr/td[12]/div/div[1]          # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 发货       # 操作说明
+
+- casename: send_info1
+  title: 运输方式
+  precond:
+  testdata:
+  element:
+    - casesteid: 14          # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: /html/body/div[1]/div/div/div[2]/div/div/div/div[7]/div/div[2]/form/div[1]/div/div/div/span/span/i            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 运输方式       # 操作说明
+
+- casename: send_info2
+  title: 选择运输方式-湖北武汉
+  precond:
+  testdata:
+  element:
+    - casesteid: 14          # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: /html/body/div[3]/div[1]/div[1]/ul/li[3]/span            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 选择运输方式-湖北武汉       # 操作说明
+
+- casename: send_info3
+  title: 输入采购价
+  precond:
+  testdata:
+  element:
+    - casesteid: 14          # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: input          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[7]/div/div[2]/form/div[3]/div/div/input            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 输入采购价
+
+- casename: send_info4
+  title: 输入备注
+  precond:
+  testdata:
+  element:
+    - casesteid: 14          # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: input          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[7]/div/div[2]/form/div[4]/div/div/textarea            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 输入备注
+
+- casename: send_btn
+  title: 发货
+  precond:
+  testdata:
+  element:
+    - casesteid: 14          # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[7]/div/div[2]/form/div[5]/div/button/span            # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 发货
+
+
+
+- casename: stateBtn_experience
+  title: 订单状态-点击体验期
+  precond:
+  testdata:
+  element:
+    - casesteid: 10           # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[1]/div/div[2]/div[6]             # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait:            #操作等待时间  folt/s
+      info: 订单状态-点击体验期       # 操作说明
+
+- casename: list_btn
+  title: 访问体验期订单详情
+  precond:
+  testdata:
+  element:
+    - casesteid: 11           # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[3]/div/div/div[3]/table/tbody/tr[2]/td/div[1]/div/div[2]             # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait: 2            #操作等待时间  folt/s
+      info: 访问体验期订单详情       # 操作说明
+
+- casename: bill_btn
+  title: 点击查看分期账单
+  precond:
+  testdata:
+  element:
+    - casesteid: 11           # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[1]/div[3]/div[6]/div        # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait: 2            #操作等待时间  folt/s
+      info: 点击查看分期账单       # 操作说明
+
+- casename: check_bill
+  title: 勾选账单
+  precond:
+  testdata:
+  element:
+    - casesteid: 11           # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: /html/body/div[1]/div/div/div[2]/div/div/div/div[1]/div[3]/div[7]/div/div[2]/div/div/div[4]/div[3]/table/tbody/tr[2]/td[1]/div/label/span/span        # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait: 2            #操作等待时间  folt/s
+      info: 勾选账单       # 操作说明
+
+- casename: Withhold_btn
+  title: 点击扣款
+  precond:
+  testdata:
+  element:
+    - casesteid: 11           # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[1]/div[3]/div[7]/div/div[3]/div/button[3]             # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait: 2            #操作等待时间  folt/s
+      info: 点击扣款       # 操作说明
+
+- casename: exit_bill
+  title: 点击退出账单
+  precond:
+  testdata:
+  element:
+    - casesteid: 11           # 操作步骤
+      types: xpath             # 定位类型  支持('id', 'name', 'xpath', 'css', 'class', 'link', 'partlink', 'tag', 'function')
+      operate: click          # 操作类型 支持 input(输入) , clear(清除) , submit(提交),jsclear (js清除),jsclear_continue_input(js清除后输入),clear_continue_input(清除在输入) 、click(点击) ,text(提取文本) ,scroll(滑动下拉) get_html(获取当前网页信息) get_url(获取当前url)* 注意 types = function  时  operate类型必须为 get_html get_url  locate可为空
+      locate: //*[@id="app"]/div/div/div[2]/div/div/div/div[1]/div[3]/div[7]/div/div[1]/button/i       # 定位元素
+      listindex:              # 多个时列表索引 单个为空 /int
+      locawait: 2            #操作等待时间  folt/s
+      info: 点击退出账单       # 操作说明
+
+

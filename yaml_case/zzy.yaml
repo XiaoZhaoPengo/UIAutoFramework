@@ -1,0 +1,27 @@
+casename: test_web_demo
+title: 百度搜索测试
+
+testdata:
+  - "123"
+  - "456"
+  - "789"
+
+locators:
+  - step: 输入搜索关键词
+    by: name
+    value: wd
+    operate: send_keys
+    input: "{test_data}"
+    info: 输入搜索关键词
+
+  - step: 点击搜索按钮
+    by: id
+    value: su
+    operate: click
+    info: 点击搜索按钮
+
+  - step: 等待搜索结果加载
+    by: id
+    value: content_left
+    operate: wait_for_element
+    info: 等待搜索结果加载

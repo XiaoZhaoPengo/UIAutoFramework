@@ -1,0 +1,120 @@
+# 定位方式
+# MobileBy.ACCESSIBILITY_ID: 使用 accessibility id 定位元素
+# MobileBy.IOS_PREDICATE: 使用 iOS 的 predicate 字符串定位元素
+# MobileBy.IOS_CLASS_CHAIN: 使用 iOS 的 class chain 定位元素
+# MobileBy.ANDROID_UIAUTOMATOR: 使用 Android 的 UiAutomator 定位元素
+# MobileBy.ANDROID_VIEWTAG: 使用 Android 的 view tag 定位元素
+# MobileBy.XPATH: 使用 XPath 定位元素
+# MobileBy.NAME: 使用 name 属性定位元素
+# MobileBy.CLASS_NAME: 使用 class name 定位元素
+# MobileBy.ID: 使用 id 定位元素
+# MobileBy.CSS_SELECTOR: 使用 CSS 选择器定位元素（主要用于 Web 视图）
+# COORDINATES 坐标定位 "x,y"
+
+
+casename: test_ios_zzy
+title: 支付宝租租鸭小程序测试
+
+testdata:
+  - "iPhone 15 Pro Max"
+
+locators:
+  - step: 点击搜索框
+    by: XPATH
+    value: "//XCUIElementTypeOther[@name='搜索框']"
+    action: click
+
+  - step: 点击我的小程序
+    by: XPATH
+    value: "//XCUIElementTypeStaticText[@name='我的小程序']"
+    action: click
+
+  - step: 点击租租鸭小程序
+    by: XPATH
+    value: "//XCUIElementTypeStaticText[@name='租租鸭']"
+    action: click
+
+#  - step: 关闭活动权益弹窗(支付宝控制的有时候不弹)
+#    by: IOS_CLASS_CHAIN
+#    value: "**/XCUIElementTypeOther[`label == '文稿']/XCUIElementTypeOther[1]"
+#    action: click
+#    optional: true
+
+
+  - step: 搜索设备
+    by: XPATH
+    value: "(//XCUIElementTypeStaticText[@name='iPhone 15 Pro Max'])[1]"
+    action: click
+
+  - step: 输入搜索文案
+    by: XPATH
+    value: "//XCUIElementTypeApplication[@name='支付宝']/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField"
+    action: send_keys
+    input: 测试
+
+
+  - step: 点击搜索
+    by: XPATH
+    value: "(//XCUIElementTypeStaticText[@name='搜索'])[2]"
+    action: click
+
+  - step: 选择商品
+    by: XPATH
+    value: "//XCUIElementTypeStaticText[@name='长租测试商品']"
+    action: click
+
+  - step: 选择免押租赁
+    by: XPATH
+    value: "//XCUIElementTypeStaticText[@name='领券下单']"
+    action: click
+
+  - step: 点击确定
+    by: XPATH
+    value: "//XCUIElementTypeStaticText[@name='确定']"
+    action: click
+
+  - step: 再次选择免押租赁
+    by: XPATH
+    value: "//XCUIElementTypeApplication[@name='支付宝']/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[38]"
+    action: click
+
+  - step: 同意协议
+    by: XPATH
+    value: "//XCUIElementTypeStaticText[@name='我已知晓并同意']"
+    action: click
+
+
+  - step: 开通服务
+    by: XPATH
+    value: "//XCUIElementTypeButton[@name='同意协议并开通']"
+    action: click
+    optional: true
+
+
+  - step: 输入支付密码
+    by: CUSTOM
+    value: "134012"
+    action: input_password
+    optional: true
+
+  - step: 点击完成
+    by: XPATH
+    value: "//XCUIElementTypeButton[@name='完成']"
+    action: click
+    optional: true
+
+  - step: 同意协议 免押下单
+    by: XPATH
+    value: "//XCUIElementTypeApplication[@name='支付宝']/XCUIElementTypeWindow[1]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[3]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther"
+    action: click
+
+  - step: 确认付款
+    by: XPATH
+    value: "//XCUIElementTypeButton[@name='同意协议并授权,确认付款，租赁（预授权），付款金额3.00元人民币']"
+    action: click
+
+  - step: 再次输入支付密码
+    by: ACCESSIBILITY_ID
+    value: "密码共6位，已输入0位"
+    action: send_keys
+    input: "134012"

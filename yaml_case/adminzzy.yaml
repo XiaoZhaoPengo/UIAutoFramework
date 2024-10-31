@@ -1,0 +1,77 @@
+casename: test_ios_zzy
+title: 支付宝租租鸭小程序测试
+
+testdata:
+  - "iPhone 14 Pro Max"
+
+locators:
+  - step: 点击搜索框
+    by: XPATH
+    value: "//XCUIElementTypeOther[@name='搜索框']"
+    action: click
+
+  - step: 点击我的小程序
+    by: XPATH
+    value: "//XCUIElementTypeStaticText[@name='我的小程序']"
+    action: click
+
+  - step: 点击租租鸭小程序
+    by: XPATH
+    value: "//XCUIElementTypeCell[@name='租租鸭']"
+    action: click
+
+  - step: 选择设备
+    by: XPATH
+    value: "//XCUIElementTypeStaticText[@name='{test_data}']"
+    action: click
+
+  - step: 选择免押租赁
+    by: XPATH
+    value: "//XCUIElementTypeStaticText[@name='免押租赁']"
+    action: click
+
+  - step: 点击确定
+    by: XPATH
+    value: "//XCUIElementTypeStaticText[@name='确定']"
+    action: click
+
+  - step: 再次选择免押租赁
+    by: XPATH
+    value: "//XCUIElementTypeStaticText[@name='免押租赁']"
+    action: click
+
+  - step: 同意协议
+    by: XPATH
+    value: "//XCUIElementTypeStaticText[@name='我已知晓并同意']"
+    action: click
+
+  - step: 开通服务
+    by: XPATH
+    value: "//XCUIElementTypeButton[@name='同意协议并开通']"
+    action: click
+
+  - step: 输入支付密码
+    by: CUSTOM
+    value: "134012"
+    action: input_password
+
+  - step: 点击完成
+    by: XPATH
+    value: "//XCUIElementTypeButton[@name='完成']"
+    action: click
+
+  - step: 同意协议免押下单
+    by: XPATH
+    value: "//XCUIElementTypeStaticText[@name='同意协议 免押下单']"
+    action: click
+
+  - step: 确认付款
+    by: XPATH
+    value: "//XCUIElementTypeButton[@name='同意协议并授权,确认付款，租赁（预授权），付款金额7.00元人民币']"
+    action: click
+
+  - step: 再次输入支付密码
+    by: ACCESSIBILITY_ID
+    value: "密码共6位，已输入0位"
+    action: send_keys
+    input: "134012"
