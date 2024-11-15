@@ -2,7 +2,7 @@ import pytest
 import allure
 from common.app_base import AppBase
 from common.log_utils import logger
-from appium.webdriver.common.mobileby import MobileBy
+from appium.webdriver.common.appiumby import AppiumBy as MobileBy
 
 @pytest.mark.usefixtures("ios_driver")
 class TestIosZzy:

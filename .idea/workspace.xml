@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="471f4f59-7486-4fb2-8811-e041b7084ba5" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/appium.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/appium.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/appium.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/app_demo/test_ios_zzy.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/app_demo/test_ios_zzy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case/web_demo/test_zzy_web.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/web_demo/test_zzy_web.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/app_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/app_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +49,7 @@
     "Python 测试.Python 测试 (test_zzy.py 内).executor": "Run",
     "Python 测试.Python 测试 (test_zzy_web.py 内).executor": "Run",
     "Python 测试.Python 测试 (zzy.py 内).executor": "Run",
+    "Python 测试.test_ios_zzy.TestIosZzy 的 Python 测试.executor": "Run",
     "Python 测试.test_ios_zzy.TestIosZzy.test_ios_zzy 的 Python 测试.executor": "Run",
     "Python 测试.test_ios_zzy.TestZzy.test_zzy 的 Python 测试.executor": "Run",
     "Python 测试.test_main.test_run 的 Python 测试.executor": "Run",
@@ -73,8 +75,9 @@
     "Python.test_main.executor": "Run",
     "Python.zzy.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "UIAutoFramework",
     "last_opened_file_path": "/Users/leave/Desktop/python/appium/yaml_case",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -83,7 +86,7 @@
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "build.tools",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -105,7 +108,7 @@
       <recent name="$PROJECT_DIR$/other" />
     </key>
   </component>
-  <component name="RunManager" selected="Python 测试.test_test_ios_zzy02.TestTest_ios_zzy.test_test_ios_zzy 的 Python 测试">
+  <component name="RunManager" selected="Python 测试.test_ios_zzy.TestIosZzy 的 Python 测试">
     <configuration name="generate_test_case" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="appium" />
       <option name="ENV_FILES" value="" />
@@ -129,6 +132,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Python 测试 (test_ios_zzy.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="appium" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case/app_demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/case/app_demo/test_ios_zzy.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python 测试 (test_main.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="appium" />
       <option name="ENV_FILES" value="" />
@@ -145,7 +163,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="test_ios_zzy.TestIosZzy.test_ios_zzy 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="test_ios_zzy.TestIosZzy 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="appium" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -155,9 +173,8 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_ios_zzy.TestIosZzy.test_ios_zzy&quot;" />
+      <option name="_new_target" value="&quot;test_ios_zzy.TestIosZzy&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -177,37 +194,20 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="test_zzy_web.TestZzyWeb.test_zzy_web 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="appium" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case/web_demo" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_zzy_web.TestZzyWeb.test_zzy_web&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python 测试.test_ios_zzy.TestIosZzy 的 Python 测试" />
+        <item itemvalue="Python 测试.Python 测试 (test_ios_zzy.py 内)" />
         <item itemvalue="Python 测试.test_test_ios_zzy02.TestTest_ios_zzy.test_test_ios_zzy 的 Python 测试" />
         <item itemvalue="Python.generate_test_case" />
         <item itemvalue="Python 测试.Python 测试 (test_main.py 内)" />
-        <item itemvalue="Python 测试.test_zzy_web.TestZzyWeb.test_zzy_web 的 Python 测试" />
-        <item itemvalue="Python 测试.test_ios_zzy.TestIosZzy.test_ios_zzy 的 Python 测试" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PY-242.21829.153" />
-        <option value="bundled-python-sdk-464836ebc622-b74155a9e76b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.21829.153" />
+        <option value="bundled-python-sdk-fb887030ada0-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.21565.199" />
       </set>
     </attachedChunks>
   </component>
@@ -241,6 +241,10 @@
           <url>file://$PROJECT_DIR$/common/app_base.py</url>
           <line>387</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/common/notification_manager.py</url>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

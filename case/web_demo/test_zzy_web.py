@@ -29,5 +29,5 @@ class TestZzyWeb:
             web_driver.execute_test_steps('zzy_web', test_data)
 
         with allure.step("最终结果截图"):
-        web_driver.take_screenshot(f"test_zzy_web_result.png")
+            web_driver.take_screenshot(f"test_zzy_web_result.png")
 

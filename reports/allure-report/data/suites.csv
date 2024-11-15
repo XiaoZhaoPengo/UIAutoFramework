@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"
+        # 参数化测试 支付宝租租鸭小程序测试
+        ","24116","使用设备 iPhone 15 Pro Max 进行支付宝租租鸭小程序测试","case.app_demo","Wed Sep 25 11:01:11 CST 2024","failed","Wed Sep 25 11:01:35 CST 2024","TestTest_ios_zzy","test_test_ios_zzy02","",""

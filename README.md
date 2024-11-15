@@ -16,7 +16,7 @@
 ## 环境准备
 
 ### 必需环境
-- Python 3.7+
+- Python 3.7+（作者用的python3.10）
 - Node.js 12+
 - Appium 2.0+
 - Chrome/Firefox浏览器
