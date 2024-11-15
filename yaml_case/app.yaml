@@ -132,7 +132,7 @@ locators:
 
   - step: 确认付款
     by: XPATH
-    value: "//XCUIElementTypeButton[@name='同意协议并授权,确认付款，租赁（预授权），付款金额3.00元人民币']"
+    value: "//XCUIElementTypeButton[@name='同意协议并授权,确认付款，租赁（预授权），付款金额8.00元人民币']"
     action: click
 
   - step: 再次输入支付密码

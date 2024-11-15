@@ -368,8 +368,11 @@ class AppBase:
             return None
         return case_data.get('title', '')
 
-    def find_element_with_retry(self, by, value, retries=2, timeout=10):
-        for attempt in range(retries + 1):
+    def find_element_with_retry(self, by, value, retries=1, timeout=10):
+        """
+        查找元素，失败时只重试一次
+        """
+        for attempt in range(retries + 1): # retries=1 时会循环两次：初始尝试 + 一次重试
             try:
                 if by == 'COORDINATES':
                     x, y = map(int, value.split(','))
