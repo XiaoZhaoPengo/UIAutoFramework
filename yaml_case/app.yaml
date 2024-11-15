@@ -11,6 +11,8 @@
 # MobileBy.CSS_SELECTOR: 使用 CSS 选择器定位元素（主要用于 Web 视图）
 # COORDINATES 坐标定位 "x,y"
 
+# optional: true 是一个步骤配置项，用于标记某个步骤是否为可选步骤。当设置为 true 时，即使这个步骤执行失败也不会导致整个测试用例失败。默认为false
+
 
 casename: test_ios_zzy
 title: 支付宝租租鸭小程序测试
@@ -43,15 +45,15 @@ locators:
 
   - step: 搜索设备
     by: XPATH
-    value: "(//XCUIElementTypeStaticText[@name='iPhone 15 Pro Max'])[1]"
+    value: "//XCUIElementTypeStaticText[@name='iPhone 15 Pro Max']"
     action: click
+    sleep: 0.5
 
   - step: 输入搜索文案
     by: XPATH
     value: "//XCUIElementTypeApplication[@name='支付宝']/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField"
     action: send_keys
-    input: 测试
-
+    input: 长租测试
 
   - step: 点击搜索
     by: XPATH
@@ -65,7 +67,7 @@ locators:
 
   - step: 选择免押租赁
     by: XPATH
-    value: "//XCUIElementTypeStaticText[@name='领券下单']"
+    value: "//XCUIElementTypeStaticText[@name='免押租赁']"
     action: click
 
   - step: 点击确定
@@ -73,9 +75,29 @@ locators:
     value: "//XCUIElementTypeStaticText[@name='确定']"
     action: click
 
+
+#  - step: 点击手机号授权登录
+#    by: XPATH
+#    value: "//XCUIElementTypeButton[@name='手机号授权登录']"
+#    action: click
+#    optional: true
+
+#  - step: 选择免押租赁
+#    by: XPATH
+#    value: "//XCUIElementTypeStaticText[@name='免押租赁']"
+#    action: click
+#    optional: true
+#
+#  - step: 点击确定
+#    by: XPATH
+#    value: "//XCUIElementTypeStaticText[@name='确定']"
+#    action: click
+#    optional: true
+
+
   - step: 再次选择免押租赁
     by: XPATH
-    value: "//XCUIElementTypeApplication[@name='支付宝']/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeWebView/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[38]"
+    value: "//XCUIElementTypeStaticText[@name='免押租赁']"
     action: click
 
   - step: 同意协议

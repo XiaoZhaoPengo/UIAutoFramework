@@ -5,14 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="471f4f59-7486-4fb2-8811-e041b7084ba5" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/appium.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/appium.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/app_demo/test_ios_zzy.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/app_demo/test_ios_zzy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case/web_demo/test_zzy_web.py" beforeDir="false" afterPath="$PROJECT_DIR$/case/web_demo/test_zzy_web.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/app_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/app_base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/data/behaviors.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/allure-report/data/behaviors.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/data/categories.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/allure-report/data/categories.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/data/packages.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/allure-report/data/packages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/data/suites.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/allure-report/data/suites.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/data/test-cases/4846a2a225ce444e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/data/timeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/allure-report/data/timeline.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/export/influxDbData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/reports/allure-report/export/influxDbData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/history/history.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/allure-report/history/history.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/allure-report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/duration.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/allure-report/widgets/duration.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/severity.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/allure-report/widgets/severity.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/allure-report/widgets/status-chart.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/allure-report/widgets/status-chart.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yaml_case/app.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/yaml_case/app.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +57,7 @@
     "Python 测试.Python 测试 (zzy.py 内).executor": "Run",
     "Python 测试.test_ios_zzy.TestIosZzy 的 Python 测试.executor": "Run",
     "Python 测试.test_ios_zzy.TestIosZzy.test_ios_zzy 的 Python 测试.executor": "Run",
+    "Python 测试.test_ios_zzy.TestIosZzy.test_ios_zzy 的 pytest.executor": "Run",
     "Python 测试.test_ios_zzy.TestZzy.test_zzy 的 Python 测试.executor": "Run",
     "Python 测试.test_main.test_run 的 Python 测试.executor": "Run",
     "Python 测试.test_main.test_run_multiple 的 Python 测试.executor": "Run",
@@ -108,30 +115,7 @@
       <recent name="$PROJECT_DIR$/other" />
     </key>
   </component>
-  <component name="RunManager" selected="Python 测试.test_ios_zzy.TestIosZzy 的 Python 测试">
-    <configuration name="generate_test_case" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="appium" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generate_test_case.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python 测试.test_ios_zzy.TestIosZzy.test_ios_zzy 的 pytest">
     <configuration name="Python 测试 (test_ios_zzy.py 内)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="appium" />
       <option name="ENV_FILES" value="" />
@@ -178,6 +162,23 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="test_ios_zzy.TestIosZzy.test_ios_zzy 的 pytest" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="appium" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case/app_demo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_ios_zzy.TestIosZzy.test_ios_zzy&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="test_test_ios_zzy02.TestTest_ios_zzy.test_test_ios_zzy 的 Python 测试" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="appium" />
       <option name="ENV_FILES" value="" />
@@ -196,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python 测试.test_ios_zzy.TestIosZzy.test_ios_zzy 的 pytest" />
+        <item itemvalue="Python 测试.Python 测试 (test_main.py 内)" />
         <item itemvalue="Python 测试.test_ios_zzy.TestIosZzy 的 Python 测试" />
         <item itemvalue="Python 测试.Python 测试 (test_ios_zzy.py 内)" />
         <item itemvalue="Python 测试.test_test_ios_zzy02.TestTest_ios_zzy.test_test_ios_zzy 的 Python 测试" />
-        <item itemvalue="Python.generate_test_case" />
-        <item itemvalue="Python 测试.Python 测试 (test_main.py 内)" />
       </list>
     </recent_temporary>
   </component>
@@ -233,6 +234,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
